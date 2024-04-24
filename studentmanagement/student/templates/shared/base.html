@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="background-color: rgb(248, 0, 0);">header</h1>
+    <h2 style="background-color: #00ccff;">
+    <a href="/STUD/sab/">about</a>
+    <a href="/STUD/scon/">contact</a>
+    
+   </h2>
+    
+   <h2 style="background-color: rgb(135, 117, 179);">
+        <a href="{% url 'sa' %}">about</a>
+        <a href="{% url 'sc' %}">contact</a>
+        <a href="{% url 'add' %}">add department</a>
+        <a href="{% url 'add_stud' %}">add student</a>
+        <a href="{% url 'view_stud' %}">view student</a>
+    </h2>
+    
+{% block content1 %}
+
+{% endblock content1 %}
+<h1 style="background-color: rgb(0, 255, 26);">footer</h1>
+</body>
+</html>

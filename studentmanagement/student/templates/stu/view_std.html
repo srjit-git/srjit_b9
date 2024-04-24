@@ -1,0 +1,29 @@
+
+{% extends 'shared/base.html' %}
+    
+{% block content1 %}
+<h1>student details</h1>
+<table border="2px">
+    <tr>
+        <th>department</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>pic</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{ i.dept_id.dept_name }}</td>
+        <td>{{ i.first_name}}</td>
+        <td>{{ i.last_name}}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.phone }}</td>
+        <td><img width="120px" height="120px" src="{{ i.pic.url}}" alt=""></td>
+        <td><a href="/STUD/delst/{{i.id}}">delete</a></td>
+        <td><a href="/STUD/upst/{{i.id}}">edit</a></td>
+       
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content1 %}

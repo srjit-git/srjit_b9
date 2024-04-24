@@ -1,0 +1,28 @@
+{% extends 'shared/base.html' %}
+
+{% block content1%}
+<h1>student register form</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">select department</label>
+    <select name="dpt" id="">
+        <option value="select"></option>
+        {% for i in dpt %}
+        <option value="{{i.id}}">{{ i.dept_name }}</option>
+        {% endfor %}
+    </select><br>
+    <label for="">enter your first name:</label>
+    <input type="text" name="fname" id=""><br>
+    <label for="">enter your last name:</label>
+    <input type="text" name="lname" id=""><br>
+    <label for="">enter your email:</label>
+    <input type="email" name="em" id=""><br>
+    <label for="">enter your phone:</label>
+    <input type="number" name="ph" id=""><br>
+    <label for="">enter your pic:</label>
+    <input type="file" name="dp" id=""><br>
+    <input type="submit" value="save">
+  
+    
+</form>
+{% endblock content1 %}
